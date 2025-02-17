@@ -69,6 +69,10 @@ header{
     font-size: 0;
 }
 
+#nav{
+    margin: 0; /* Removes margin at the bottom of our UL */
+}
+
 /* Overrides the font size implications in the menucontainer */
 #nav li{
     font-size: 14px;
@@ -104,4 +108,11 @@ header{
     font-size: 14px;
     font-weight: 300;  /* Slightly thinner than the standard font weight */
     letter-spacing: 2px;
+}
+
+/* --------------------Hover.css */
+/* Before pseudo element is where the background colour is set  */
+.hvr-sweep-to-bottom:before {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Important is making sure that this is being applied! */
+    height: 120px !important;
 }
