@@ -22,6 +22,29 @@
     background-color: #525252;
 }
 
+/* --------------------Special paddings/margins/text*/
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
 /* --------------------Heading */
 
 header{
@@ -115,4 +138,62 @@ header{
 .hvr-sweep-to-bottom:before {
     background-color: rgba(0, 0, 0, 0.2) !important; /* Important is making sure that this is being applied! */
     height: 120px !important;
+}
+
+/* --------------------Footer*/
+
+footer{
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+.cv-pdf i{
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out; /* transition applied to parent element and acts the same as a hover pseudo class */
+    -moz-transition: all 0.35s ease-in-out; /* vendor prefix included (Mozilla) */
+    -webkit-transition: all 0.35s ease-in-out; /* vendor prefix included (Webkit) */
+    -o-transition: all 0.35s ease-in-out; /* vendor prefix included (Opera) */
+    /*The transition properties defined in the .cv-pdf i class will smoothly animate any changes applied to the child <i> elements
+     when they are hovered over. In this case, when the hover state is triggered, the color change to #e84610 will animate smoothly
+      over 0.35 seconds.*/
+}
+
+.cv-pdf i:hover{
+    color: #e84610
+}
+
+.social-links{
+    padding-bottom: 15px;
+}
+
+.social-links li a i{
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%; /* If you set the border-radius to 50% when something has equal height and width, then you get a circle. */
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out; /* transition applied to parent element and acts the same as a hover pseudo class */
+    -moz-transition: all 0.35s ease-in-out; /* vendor prefix included (Mozilla) */
+    -webkit-transition: all 0.35s ease-in-out; /* vendor prefix included (Webkit) */
+    -o-transition: all 0.35s ease-in-out; /* vendor prefix included (Opera) */
+    /*The transition properties defined in the .cv-pdf i class will smoothly animate any changes applied to the child <i> elements
+     when they are hovered over. In this case, when the hover state is triggered, the color change to #e84610 will animate smoothly
+      over 0.35 seconds.*/
+}
+
+.social-links li a i:hover{
+    background-color: #e84610;
+}
+
+#footer-details{
+    padding: 20px;
 }
