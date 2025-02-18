@@ -10,6 +10,10 @@
     background-color: #ffffff;
 }
 
+.bg-color-personal-info{
+    background-color: #f4f4f4;
+}
+
 .ui-menu-color-home{
     background-color: #e67e22;
 }
@@ -228,4 +232,43 @@ footer{
 
 .three-reasons-heading{
     margin-bottom: 15px;
+}
+
+/* --------------------Personal Info */
+
+.personal-info-item{
+    /* We want it to take up the maximum horizontal space available and push its siblings down below it. */
+    margin-bottom: 20px;
+    display: block;  /* Will start and end with a newline and occupy the entirety of the horizontal space. */
+    clear: both; /* No other items can appear at either side of it in case we were using floats. */    
+}
+
+.personal-info-item .key,
+.personal-info-item .value{
+    padding-right: 8px;
+    display: inline-block;
+    /* Remember that a <div> is a block level element by default, 
+    which means it starts and ends with a new line and occupies the maximum horizontal space available.
+    An inline block on the other hand allows us to put two divs side-by-side, and that's what we want to do here. */
+}
+
+.personal-info-item .key p,
+.personal-info-item .value p{
+    margin: 0;  /* Set the margin to 0 so that we can deal with the margins outside of our personal info item paragraph. */
+}
+
+.personal-info-item .key{
+    width: 30%;
+    margin-right: 21px;
+    padding-top: 2px;
+    vertical-align: top;  /* Set the vertical-align to top so that it hugs the top of the <div> as much as possible. */
+}
+
+.personal-info-item .key p{
+    font-weight: 700;
+}
+
+.personal-info-item .value{
+    position: relative;  /* relative to its predecessor */
+    width: 60%;
 }
