@@ -14,6 +14,10 @@
     background-color: #f4f4f4;
 }
 
+.bg-color-work-history{
+    background-color: #9b59b6;
+}
+
 .ui-menu-color-home{
     background-color: #e67e22;
 }
@@ -63,6 +67,7 @@ h4 {
     float: none;
 }
 
+.history-heading,
 .section-heading{
     font-family: "Exo", sans-serif;
     font-weight: 300;
@@ -271,4 +276,73 @@ footer{
 .personal-info-item .value{
     position: relative;  /* relative to its predecessor */
     width: 60%;
+}
+
+/* --------------------Skills */
+
+.progress{
+    position: relative;
+    height: 25px;  /* When you change the height of a progress wrapper, it automatically changes the height of the bar inside. */
+    margin-bottom: 4px;
+}
+
+.progress-type{
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25, 25, 25, 0.2);
+}
+
+.progress-section{
+    margin: 40px 20px;
+}
+
+/* --------------------Work History */
+
+.history-heading{
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.timeline-item{
+    padding: 4em 2em 0em 2em;
+    position: relative;  /* The position of our timeline-item is going to be relative.  This is because we're going to have some absolute children that we want to style inside this timeline-item */
+    color: #fafafa;
+    border-left: 1px solid;
+}
+
+.timeline-item p{
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:before{ /* What we're going to do with the before pseudo element here is to zero in and to target our data-dates attribute. */
+    content: attr(data-dates); /* you can only use content with the before or after pseudo elements. This sets the content that will appear either before or after the class in question. */
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:after{ /* The after pseudo element is going to create a little disk.  It's going to be a node or a circle on the timeline to represent Rosie's work history. */
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;  /* So there are a couple of ways that we can make things a circle.  We can set the border radius to 50%, or we can set it to the height and the width of the square. */
+    content: '';  /* We're going to set the content to an empty string because we don't want anything else to appear in there. */
+    background: #fafafa;
+}
+
+.history-items{
+    margin-bottom: 30px;
 }
